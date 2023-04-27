@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Beer Recommender</title>
+
+    <!-- Favicons -->
+    <link href="../static/img/favicon1.png" rel="icon">
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- Main Stylesheet File -->
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <!-- Font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- No Script CSS  -->
+    <noscript>
+        <link rel="stylesheet" href="../static/css/noscript.css" />
+    </noscript>
+    <!-- Anychart -->
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css?hcode=c11e6e3cfefb406e8ce8d99fa8368d33" type="text/css" rel="stylesheet">
+    <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css?hcode=c11e6e3cfefb406e8ce8d99fa8368d33" type="text/css" rel="stylesheet">
+</head>
+
+<body class="is-preload">
+
+    <!-- Nav-Bar Header - Copy paste for every page-->
+    <header id="header">
+        <h1>
+            <a href="index.html">
+                <p style="color: #ffffff;font-size: 150%;margin: 0;">Beer Recommender</p>
+            </a>
+        </h1>
+        <nav class="navbar navbar-expand-md navbar-fixed-top">
+            <div class="collapse navbar-collapse navbar-toggleable-xs" id="navbarColor01">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="knnrecommender.html">Beer Finder &nbsp;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="userpredict.html">Personal Predictor &nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner - Main Selection Page-->
+    <section id="predictorpage" class="main style3 primary">
+        <div class="content">
+            <div class="container-fluid">
+                <header>
+                    <br>
+                    <h2 class="align-items-center centered" style="color: #000000;">Let Us Predict How You Would Rate Some Beers!</h2>
+                    <hr>
+                    <br>
+                    <ul class="actions special">
+                        <li>
+                            <button class="dropdown-toggle user-toggle custom-select button secondary" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select a Username  <span class="selected"></span>
+                                <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu user-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">tamu94</a>
+                                <a class="dropdown-item" href="#">michellebrucato</a>
+                                <a class="dropdown-item" href="#">sheetalbongale</a>
+                                <a class="dropdown-item" href="#">StoutHunter</a>
+                                <a class="dropdown-item" href="#">kojevergas</a>
+                                <a class="dropdown-item" href="#">woodychandler</a>
+                            </div>
+                        </li>
+                    </ul>
+
+    <!-- personalized beer predictor - TABLE --> 
+    <section id="beerpredict">
+        <!-- Top 10 Beer Recommendations - Table -->
+        <div class="container-fluid table-recommend" style="padding-left: 30px; padding-right: 30px;">
+            <div class="row" style="color: rgb(0, 0, 0);"  id="top10"></div>
+        </div>
+    </section>
+    
+    </header>
+    </div>
+</section>
+
+
+
+    <!-- Scripts -->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Custom scripts for this template -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Local Scripts -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/jquery.poptrox.min.js"></script>
+    <script src="../static/js/jquery.scrolly.min.js"></script>
+    <script src="../static/js/jquery.scrollex.min.js"></script>
+    <script src="../static/js/browser.min.js"></script>
+    <script src="../static/js/breakpoints.min.js"></script>
+    <script src="../static/js/util.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/userpredict.js"></script>
+    <!-- jQuery for dropdown menu-->
+    <script>
+    $('.user-menu a').on('click', function(){    
+    $('.user-toggle').html($(this).html());    
+    })
+    </script>
+
+</body>
+
+</html>
